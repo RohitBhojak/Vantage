@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router";
 import styles from "./NumberInput.module.css";
 
 export default function NumberInput({ productId }) {
   const { cart, dispatch } = useOutletContext();
   const [count, setCount] = useState(cart[productId] || "");
+
+  useEffect(() => {
+    setCount(cart[productId]);
+  }, [cart, productId]);
+
   return (
     <input
       aria-label="Quantity"
@@ -15,10 +20,7 @@ export default function NumberInput({ productId }) {
         const value = e.target.value;
         if (/^\d*$/.test(value)) setCount(value); // Only 0 or more digits are allowed
       }}
-      onBlur={(e) => {
-        dispatch({ type: "set_count", count: e.target.value, productId });
-        setCount(Number(count)); // Remove leading 0s
-      }}
+      onBlur={(e) => dispatch({ type: "set_count", count: e.target.value, productId })}
     />
   );
 }
