@@ -9,16 +9,19 @@ export default function Cart() {
   const { cart } = useOutletContext();
   const { data: cartItems, isLoading, error } = useFetchCart(cart);
 
-  const generateBill = (discount, shippingRaw) => {
-    const subTotalRaw = cartItems.reduce((total, item) => total + item.price, 0);
-    const totalRaw = subTotalRaw - (subTotalRaw * discount) / 100 + shippingRaw;
-    const subTotal = formatINR(totalRaw);
+  const generateBill = (discountPercent, shippingRaw) => {
+    const subTotalRaw = cartItems.reduce((total, item) => total + item.price * cart[item.id], 0);
+    const discountRaw = (subTotalRaw * discountPercent) / 100;
+    const totalRaw = subTotalRaw - discountRaw + shippingRaw;
+
+    const subTotal = formatINR(subTotalRaw);
+    const discount = formatINR(discountRaw);
     const total = formatINR(totalRaw);
     const shipping = formatINR(shippingRaw);
     return { subTotal, discount, shipping, total };
   };
 
-  const bill = generateBill(15, 100);
+  const bill = generateBill(10, 1);
 
   return (
     <main>
