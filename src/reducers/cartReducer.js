@@ -2,7 +2,7 @@ export default function cartReducer(cart, action) {
   const pid = action.productId;
 
   const updateCount = (count) => {
-    if (count) return { ...cart, [pid]: count };
+    if (count) return { ...cart, [pid]: Math.min(count, 99) };
     const { [pid]: _, ...newCart } = cart;
     return newCart;
   };
