@@ -1,6 +1,6 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import styles from "./CartItem.module.css";
-import { QuantityInputSkeleton } from "../QuantityInput/QuantityInputSkeleton";
+import { QuantityInputSkeleton } from "../../../components/QuantityInput/QuantityInputSkeleton";
 
 export default function CartItemSkeleton() {
   return (

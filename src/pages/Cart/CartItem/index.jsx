@@ -1,6 +1,6 @@
-import QuantityInput from "../QuantityInput";
+import QuantityInput from "../../../components/QuantityInput";
 import styles from "./CartItem.module.css";
-import { formatINR } from "../../helper/currency";
+import { formatINR } from "../../../helper/currency";
 
 export default function CartItem({ product }) {
   const price = formatINR(product.price);

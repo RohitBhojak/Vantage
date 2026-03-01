@@ -1,8 +1,8 @@
 // import { useState, useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
-import ProductItem from "../../components/ProductItem";
+import ProductItem from "./ProductItem";
 import styles from "./Products.module.css";
-import ProductItemSkeleton from "../../components/ProductItem/ProductItemSkeleton";
+import ProductItemSkeleton from "./ProductItem/ProductItemSkeleton";
 
 const url = "https://fakestoreapi.com/products";
 

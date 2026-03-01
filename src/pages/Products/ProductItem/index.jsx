@@ -1,7 +1,7 @@
-import QuantityInput from "../QuantityInput";
+import QuantityInput from "../../../components/QuantityInput";
 import { Rating } from "react-simple-star-rating";
 import styles from "./ProductItem.module.css";
-import { formatINR } from "../../helper/currency";
+import { formatINR } from "../../../helper/currency";
 
 export default function ProductItem({ product }) {
   const price = formatINR(product.price);

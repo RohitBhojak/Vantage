@@ -9,13 +9,13 @@
 }
 
 .imageContainer {
-  composes: imageContainer from "../ProductItem/ProductItem.module.css";
+  composes: imageContainer from "../../Products/ProductItem/ProductItem.module.css";
   height: 88px;
   width: 88px;
 }
 
 .image {
-  composes: img from "../ProductItem/ProductItem.module.css";
+  composes: img from "../../Products/ProductItem/ProductItem.module.css";
 }
 
 .infoContainer {
@@ -35,7 +35,7 @@
 }
 
 .title {
-  composes: title from "../ProductItem/ProductItem.module.css";
+  composes: title from "../../Products/ProductItem/ProductItem.module.css";
 }
 
 @media screen and (max-width: 768px) {
