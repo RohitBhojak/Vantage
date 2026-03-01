@@ -7,7 +7,7 @@ export default function ProductItemSkeleton() {
     <SkeletonTheme baseColor="var(--accent-light)" highlightColor="var(--bg-light)">
       <div className={styles.card}>
         <div className={styles.imageContainer} style={{ padding: 0 }}>
-          <Skeleton containerClassName="flex h-full w-full" borderRadius="1.75rem" />
+          <Skeleton containerClassName="flex h-full w-full" borderRadius="var(--border-radius)" />
         </div>
 
         <div className={styles.title}>
