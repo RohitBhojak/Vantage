@@ -9,7 +9,7 @@ export default function EmptyCart() {
         <img src={emptyCartImg} alt="Empty Cart" />
       </div>
       <span>Oops! Looks like your cart is empty</span>
-      <NavLink to="/products" className={styles.btn}>
+      <NavLink to="/products" className={styles.btn} viewTransition>
         Shop Now
       </NavLink>
     </main>

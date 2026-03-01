@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: 2rem 3.5rem;
+  align-items: start;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .cartContainer {
@@ -20,5 +22,16 @@
   }
   .cartContainer {
     max-height: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

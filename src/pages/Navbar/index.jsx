@@ -19,17 +19,17 @@ export default function Navbar({ theme, toggleTheme, cartSize }) {
       <h1 className={styles.title}>Linen</h1>
       <ul className={`${styles.list} ${isOpen ? styles.open : ""}`}>
         <li>
-          <NavLink className={styles.listItem} to="/" onClick={closeMenu}>
+          <NavLink className={styles.listItem} to="/" onClick={closeMenu} viewTransition>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink className={styles.listItem} to="/products" onClick={closeMenu}>
+          <NavLink className={styles.listItem} to="/products" onClick={closeMenu} viewTransition>
             Products
           </NavLink>
         </li>
         <li>
-          <NavLink className={styles.listItem} to="/cart" onClick={closeMenu}>
+          <NavLink className={styles.listItem} to="/cart" onClick={closeMenu} viewTransition>
             Cart
             {cartSize > 0 && (
               <span className={styles.count} role="status" aria-label="Cart count">
@@ -43,7 +43,12 @@ export default function Navbar({ theme, toggleTheme, cartSize }) {
         <button className={styles.themeToggle} onClick={toggleTheme} aria-label="Toggle theme">
           {theme === "light" ? <Moon data-testid="moon-icon" /> : <Sun data-testid="sun-icon" />}
         </button>
-        <button className={styles.menuButton} onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isOpen}>
+        <button
+          className={styles.menuButton}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
