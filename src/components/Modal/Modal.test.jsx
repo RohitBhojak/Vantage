@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Modal from ".";
 import styles from "./Modal.module.css";
 
-describe("Modal Component", () => {
+describe("Modal", () => {
   const onCloseMock = vi.fn();
   const modalText = "Modal Content";
 
