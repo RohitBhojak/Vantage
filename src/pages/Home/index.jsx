@@ -25,7 +25,7 @@ export default function Home() {
           alt="Online Shopping Hero"
           width="2800"
           height="2472"
-          fetchpriority="high"
+          fetchPriority="high"
           sizes="(max-width: 768px) 100vw, 50vw"
           srcSet={`
             ${imgPath}200.png 200w,

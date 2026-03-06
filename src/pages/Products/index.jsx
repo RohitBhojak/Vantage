@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductItem from "./ProductItem";
 import styles from "./Products.module.css";
